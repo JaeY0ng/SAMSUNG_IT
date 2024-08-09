@@ -1,4 +1,2 @@
 # SAMSUNG_IT
-삼성임원모임
-난 병신이다
-dflsdfsdfffdsfsdffd
+여기에 작성하세요
