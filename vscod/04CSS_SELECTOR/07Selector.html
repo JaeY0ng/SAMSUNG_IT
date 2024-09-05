@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .d1{
+            width: 300px;
+            height: 200px;
+            background-color: aqua;
+            border: 1px solid;
+        }
+        .d1::before{
+            content:'❤' ;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            display: block;
+            font-size: 2.6rem;
+            line-height: 50px;
+            margin-left: ;
+        }
+        .d1::after{
+            content: "_AFTER";
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 
+        가상선택자
+        ::before : content영역 앞부분에 표시할 스타일 
+        ::after  : content영역 뒷부분에 표시할 스타일
+    -->
+    <div class="d1">HelloWorld</div>
+</body>
+</html>
