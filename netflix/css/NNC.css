@@ -1,0 +1,313 @@
+body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.layout{
+    width: 1500px;
+}
+@media (max-width: 600px) {
+    .wrapper{
+        height: 300px;
+    }
+}
+.wrapper{
+    box-sizing: border-box;
+    height: 1300px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.wrapper>header{
+    position: relative;
+    left:  260px;
+    background-color: rgb(203, 203, 173);
+    width: 100%;
+    height: 430px;
+}
+.wrapper>header>.top-header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LEFT */
+.wrapper>header>.top-header>.left{}
+.wrapper>header>.top-header>.left>a{
+
+    position: relative;
+    left: 100px;
+    top: 20px;
+}
+.wrapper>header>.top-header>.left>a>img{
+    width: 138px;
+    height: 142px;
+}
+
+/* CENTER */
+.wrapper>header>.top-header>.center{
+
+}
+.wrapper>header>.top-header>.center>.title{
+    position: absolute;
+    right: 500px;
+    align-items: center;
+    color: rgb(41, 75, 82);
+    font-size: 5rem;
+}
+
+/* RIGHT */
+.wrapper>header>.top-header>.right{
+    position: absolute;
+    right: 50px;
+
+}
+.wrapper>header>.top-header>.right>a{
+
+}
+
+.btn{
+    background-color:rgb(41, 75, 82);
+    color: rgb(203, 203, 173);
+    font-weight: 700;
+    border-radius: 30px;
+}
+
+
+/* Under-head */
+.wrapper>header>.under-head{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.wrapper>header>.under-head>span{
+    position: relative;
+    font-size: 50px;
+}
+.wrapper>header>.under-head>div{
+
+}
+.wrapper>header>.under-head>input{
+    position: relative;
+    left: 40x;
+    height: 50px;
+}
+.wrapper>header>.under-head>input:nth-child(1){
+  outline: none; 
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: 2px solid; 
+  border-width: 5px; 
+  border-color: rgb(41, 75, 82); 
+  border-right-width: 2px;
+}
+.wrapper>header>.under-head>input:nth-child(2){
+    outline: none; 
+    border: 2px solid; 
+    border-width: 5px; 
+    border-color: rgb(41, 75, 82);
+}
+.wrapper>header>.under-head>input:nth-child(3){
+    outline: none; 
+    border: 2px solid; 
+    border-width: 5px; 
+    border-left-width: 1px;
+    border-color: rgb(41, 75, 82);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* db-head */
+.wrapper>header>.db-head{
+    font-size: 3rem;
+    font-weight:900;
+    /* position: relative; */
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrapper>header>.db-head>.lodge:nth-child(1){
+    position: absolute;
+    top: 300px;
+    right: 25%;
+}
+.wrapper>header>.db-head>.lodge:nth-child(2){
+    position: absolute;
+    left: 25%;
+    top: 300px;
+}
+.wrapper>header>.db-head>div>a{
+    text-decoration: none;
+    color: rgb(41, 75, 82);
+}
+.tool-bar{
+    
+    color: rgb(203, 203, 173);
+    background-color: #384853;
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    margin: 15px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    visibility: hidden;
+    opacity: 0;
+    transition : height 0.3s ease,opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+
+}
+.tool-bar>div{
+    width: 300px;
+    height: 100%;
+    font-size: 1.8rem;
+}
+.tool-bar>div:nth-child(1){
+    margin-left: 430px;
+}
+.tool-bar>div:nth-child(2){
+    margin-right: 430px;
+}
+
+/* main */
+
+.wrapper>.main{
+    position: relative;
+    
+    width: 100%;
+    margin-top: 300px;
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-around;
+}
+.wrapper>.main>div{
+
+    background-color:rgb(203, 203, 173);
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    line-height: 100px;
+}
+.wrapper>.main>div>a{
+    text-decoration: none;
+    font-weight: 800;
+    color: rgb(41, 75, 82);
+}
+.wrapper>.main>div:nth-child(1){
+    left: 500px;
+    position: absolute;
+}
+.wrapper>.main>div:nth-child(2){
+    position: absolute;
+    right :0%;
+}
+.wrapper>.main-under{
+    position: relative;
+    right: 50px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+.carouselslide{
+    display: flex;
+    top: 300px;
+    position: relative;
+    left: 310px;
+    height: 500px;
+    width: 100%;
+}
+
+/* .carousel-inner가 부모에 맞게 크기를 조정하도록 함 */
+.carousel-inner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* .carousel-item을 보이도록 설정 */
+.carousel-item {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+/* 이미지 스타일 조정 */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.body-bottom{
+    left: 310px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 2열 설정 */
+    grid-template-rows: repeat(4, 1fr);
+    top: 500px;
+    position: absolute;
+    width: 100%;
+    column-gap: auto;
+    row-gap: 100px;
+    height: 100%;
+}
+.body-bottom>.card{
+    position: relative;
+    top: 500px;
+    left: 80px;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.3rem;
+    height: 300px;
+    width: 18rem;
+}
+.card-body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100px;
+}
+.card>img{
+    border: 0.7px solid;
+
+}
+footer {
+    bottom: 0;
+    position: absolute;
+    background-color: #384853;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 0.8em;
+    width: 100%;
+    
+}
+
+footer p {
+    margin: 5px 0;
+}
+.db-head:hover ~ .tool-bar{
+    opacity:1;
+    visibility: visible;
+ height: 270px;
+    }
