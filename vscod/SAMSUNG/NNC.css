@@ -1,4 +1,5 @@
 body{
+    font-family: 'Black Han Sans', sans-serif;
     height: 70vw;
     margin: 0;
     padding: 0;
@@ -36,7 +37,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 80vw;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
     margin: 0;
     padding: 0;
 }
@@ -45,7 +46,7 @@ body{
     left:  200px;
     background-color: rgb(203, 203, 173);
     width: 100%;
-    height: 430px;
+    height: 26vw;
 }
 .wrapper>header>.top-header{
     position: relative;
@@ -62,18 +63,20 @@ body{
     top: 1vw;
 }
 .wrapper>header>.top-header>.left>a>img{
-    width: 138px;
-    height: 142px;
+    width: 8vw;
+    height: 8vw;
 }
 
 /* CENTER */
 
-.wrapper>header>.top-header>.center>.title{
+.title{
     position: relative;
+    width: 100%;
+    height: 100%;
     right: 70px;
     align-items: center;
     color: rgb(41, 75, 82);
-    font-size: 5rem;
+    font-size: 4vw;
 }
 
 /* RIGHT */
@@ -107,8 +110,7 @@ body{
 }
 .wrapper>header>.under-head>input{
     position: relative;
-    left: 40x;
-    height: 50px;
+    height: 3vw;
 }
 .wrapper>header>.under-head>input:nth-child(1){
   outline: none; 
@@ -145,14 +147,19 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+.wrapper>header>.db-head>.lodge{
+    width: 100vw;
+    height: 50vw;
+    font-size: 2.5rem;
+}
 .wrapper>header>.db-head>.lodge:nth-child(1){
     position: absolute;
     top: 300px;
-    right: 25%;
+    left: 20%;
 }
 .wrapper>header>.db-head>.lodge:nth-child(2){
     position: absolute;
-    left: 25%;
+    left: 66%;
     top: 300px;
 }
 .wrapper>header>.db-head>div>a{
@@ -171,22 +178,22 @@ body{
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    
     visibility: hidden;
     opacity: 0;
     transition : height 0.3s ease,opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 
 }
 .tool-bar>div{
-    width: 300px;
+    width: 60vw;
     height: 100%;
     font-size: 1.8rem;
 }
 .tool-bar>div:nth-child(1){
-    margin-left: 330px;
+    margin-left: 5vw;
 }
 .tool-bar>div:nth-child(2){
-    margin-right: 330px;
+    margin-right: 4vw;
 }
 
 /* main */
@@ -251,7 +258,7 @@ body{
     text-align: center;
     justify-content: center;
     text-align: center;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
     font-size: 1.3rem;
     height: 300px;
     width: 18rem;
