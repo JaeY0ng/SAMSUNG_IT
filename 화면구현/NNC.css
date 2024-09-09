@@ -1,0 +1,144 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.layout{}
+.wrapper{
+
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.wrapper>header{
+    background-color: rgb(203, 203, 173);
+    width: 100%;
+    height: 430px;
+}
+.wrapper>header>.top-header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid;
+}
+
+/* LEFT */
+.wrapper>header>.top-header>.left{}
+.wrapper>header>.top-header>.left>a{
+
+    position: relative;
+    left: 100px;
+    top: 20px;
+}
+.wrapper>header>.top-header>.left>a>img{
+    width: 138px;
+    height: 142px;
+}
+
+/* CENTER */
+.wrapper>header>.top-header>.center{
+
+}
+.wrapper>header>.top-header>.center>.title{
+    position: relative;
+    right: 70px;
+    align-items: center;
+    font-size: 3rem;
+}
+
+/* RIGHT */
+.wrapper>header>.top-header>.right{}
+.wrapper>header>.top-header>.right>a{
+    color: aquamarine;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 1.2rem;
+}
+
+.btn{
+    background-color:rgb(41, 75, 82); ;
+    color: rgb(203, 203, 173);
+    font-weight: 700;
+    border-radius: 30px;
+}
+
+
+/* Under-head */
+.wrapper>header>.under-head{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.wrapper>header>.under-head>span{
+    position: relative;
+    font-size: 50px;
+}
+.wrapper>header>.under-head>div{
+
+}
+.wrapper>header>.under-head>input{
+    position: relative;
+    left: 40x;
+    height: 50px;
+    /* display: none; */
+}
+.wrapper>header>.under-head>input:nth-child(1){
+  outline: none; 
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: 2px solid; 
+  border-width: 5px; 
+  border-color: rgb(41, 75, 82); 
+  border-right-width: 2px;
+}
+.wrapper>header>.under-head>input:nth-child(2){
+    outline: none; 
+    border: 2px solid; 
+    border-width: 5px; 
+    border-color: rgb(41, 75, 82);
+}
+.wrapper>header>.under-head>input:nth-child(3){
+    outline: none; 
+    border: 2px solid; 
+    border-width: 5px; 
+    border-left-width: 1px;
+    border-color: rgb(41, 75, 82);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.wrapper>header>.db-head{
+    font-size: 3rem;
+    font-weight:900;
+
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrapper>header>.db-head>div:nth-child(1){
+    position: absolute;
+    top: 300px;
+    right: 25%;
+}
+.wrapper>header>.db-head>div:nth-child(2){
+    position: absolute;
+    left: 25%;
+    top: 300px;
+}
+.wrapper>header>.db-head>div>a{
+    text-decoration: none;
+    color: rgb(41, 75, 82);
+}
+.wrapper>main{}
+.wrapper>main>.cards{
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+    /* gap: 80px; */
+
+}

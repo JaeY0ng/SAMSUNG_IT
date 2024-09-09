@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+      }
+      * {
+        color: ;
+        box-sizing: border-box;
+        /* border: 1px solid; */
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      a {
+        text-decoration: none;
+        
+      }
+      body {
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+      }
+      .layout-basic {
+        width: 1px;
+        margin: 0 auto;
+      }
+      .wrapper {
+        width: 100%;
+      }
+      .wrapper > header {
+      }
+      .wrapper > header > .top-header {
+      }
+      .wrapper > header >nav {
+        width: 100%;
+        text-align: center;
+      }
+      .wrapper > header >nav>.mainmenu{
+        display: flex;
+        
+      }
+
+      nav{
+        display: flex;
+        justify-content: center;
+
+      }
+      .wrapper > header >nav>.mainmenu>li{
+        margin: 0 auto;
+        margin-top: 10px;
+        width: 200px;
+        text-align: center;
+        height: 40px;
+        line-height: 20px;
+        position: relative;
+      }
+      .wrapper > header >nav>.mainmenu>li>a{
+        left: 50px;
+        display: block;
+        color: brown;
+      }
+      .wrapper > header >nav>.mainmenu>li>.submenu{
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 40px;
+      }
+      .wrapper > header >nav>.mainmenu>li>.submenu>li{
+        /* border: 1px solid; */
+      }
+      .wrapper > header >nav>.mainmenu>li>.submenu>li>a{
+        display: block;
+        color: brown;
+      }
+      .wrapper > header >nav>.mainmenu:hover .submenu{
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="top-header"></div>
+        <nav>
+            <ul class="mainmenu">
+                <li>
+                    <a href="">메뉴소개</a>
+                    <ul class="submenu">
+                        <li><a href="">추천메뉴</a></li>
+                        <li><a href="">오리지널스&맥시멈</a></li>
+                        <li><a href="">프리미엄</a></li>
+                        <li><a href="">와퍼&주니어</a></li>
+                        <li><a href="">치킨&슈림프버거</a></li>
+                        <li><a href="">올데이킹&킹모닝</a></li>
+                        <li><a href="">사이드</a></li>
+                        <li><a href="">음료&디저트</a></li>
+                       
+                    </ul>
+                </li>
+                <li>
+                    <a href="">매장소개</a>
+                    <ul class="submenu">
+                        <li><a href="">매장찾기</a></li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="">이벤트</a>
+                    <ul class="submenu">
+                        <li><a href="">이벤트</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">브랜드스토리</a>
+                    <ul class="submenu">
+                        <li><a href="">BRAND</a></li>
+                        <li><a href="">WHOPPER</a></li>
+                        <li><a href="">COMM.</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+      </header>
+      <main>
+        <section></section>
+      </main>
+      <footer></footer>
+    </div>
+  </body>
+</html>

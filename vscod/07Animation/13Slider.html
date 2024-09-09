@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider-block{
+            width: 1200px;
+            height: 150px;
+            border: 1px solid;
+            margin: 0 auto;
+
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .slider-block>.slider-wrapper{
+            width: 3000px;
+            height: 100px;
+            border: 1px solid;
+
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            gap: 15px;
+            position: relative;
+            transition: 0.3s;
+        }
+        .slider-block>.slider-wrapper>.items{
+            width: 150px;
+            height: 45px;
+            border: 1px solid;
+            border-radius: 5px;
+        }
+
+        .slider-block>label{
+            width: 35px;
+            height: 35px;
+            border: 1px solid;
+            border-radius: 50%;
+            position: absolute;
+            top:calc(50% -12.5px);
+            z-index: 5;
+            background-color: aqua;
+            cursor: pointer;
+        }
+        .slider-block>label.prev{
+            left: 3px;
+          
+        }
+        .slider-block>label.next{
+            right: 3px;
+        }
+        .slider-block>input[type="radio"]{
+            display: none;
+        }
+        .slider-block>input[type="radio"]#r-next:checked~.slider-wrapper{
+            left: -1000px;
+
+        }
+        .slider-block>input[type="radio"]#r-prev:checked~.slider-wrapper{
+            left: 0px;
+
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="slider-block">
+        <input type="radio" id="r-prev" name="sliderbutton">
+        <input type="radio" id="r-next" name="sliderbutton">
+        <label for="r-prev" class="prev">prev</label>
+        <label for="r-next" class="next">next</label>
+        <div class="slider-wrapper">
+            <div class="items">1</div>
+            <div class="items">2</div>
+            <div class="items">3</div>
+            <div class="items">4</div>
+            <div class="items">5</div>
+            <div class="items">6</div>
+            <div class="items">7</div>
+            <div class="items">8</div>
+            <div class="items">9</div>
+            <div class="items">10</div>
+            <div class="items">11</div>
+            <div class="items">12</div>
+            <div class="items">13</div>
+            <div class="items">14</div>
+            <div class="items">15</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+     #d1,#d3{
+         width: 150px;
+         height: 150px;
+          border: 1px solid;
+        }
+        #d4{
+         width: 350px;
+         height: 350px;
+          border: 1px solid;
+        }
+    </style>
+<body>
+    <div id="d1"></div>
+    <hr>
+    <a id="d2" href="javascript:void(0)">TEST</a>
+    <hr>
+    <button onclick="ClickHandler">TEST2</button>
+    <hr>
+    <form name="frm" action="test.jsp" onsubmit="return false"> 
+        <!-- onsubmit="return false" : 어떤 기능을 사용하더라도 동작을 하지 않음 -->
+        <input type="text" name="userid"/>
+        <input type="text" name="password"/>
+        <input class="submit-button" type="submit" value="버튼1"/>
+        <button class="submit-button">버튼2</button>
+        <a href="javascript:void(0)" class="submit-button">버튼3</a>
+    </form>
+    <hr>
+    <div id="d3"></div>
+    <hr>
+    <div class="image-block">
+         <img id="image" src="./다운로드.jpg" style="width: 100px;height: 100px;"/>
+    </div>
+    <div id="d4"></div>
+    <script>
+        //클릭이벤트
+        const d1Tg = document.getElementById("d1")
+        let cnt=0;
+        d1Tg.addEventListener('click',(e)=>{
+            console.log("clicked..",e)
+            console.log("clicked..",e.target)
+            d1Tg.innerHTML=`<h3>CLICKED...${++cnt}</h3>`;
+        })
+        const d2Tg = document.getElementById("d2");
+        d2Tg.addEventListener('click',()=>{
+            console.log("clicked a tag...")
+        })
+        function ClickHandler(){
+            let cnt=0;
+            function count(){
+                cnt++
+                console.log("clicked...",cnt);
+            }
+            return count
+        }
+        const Count = ClickHandler();
+
+        //폼버튼 클릭 이벤트
+        const btns = document.querySelectorAll(".submit-button")
+        console.log(btns)
+        btns.forEach((e1)=>{
+            e1.addEventListener('click',(e)=>{  //'click',(e) 
+                console.log('clicked...',e.target) //e,target 어느 객체가 이벤트를 발생시켰는지 확인 가능
+                if(!isValid(document.frm)){
+                return ;
+            }
+                document.frm.submit();
+            })
+        })
+
+
+        //유효성 체크
+        function isValid(form){
+        // console.log("isValid",typeof form.userid.value)
+        if(form.userid.value.trim()===""){  //만약 userid의 값이 비어있다면
+            alert("ValidationCheck error..Userid를 입력하세요.")
+            return false; 
+            //return false에 부합한다면 하기 코드들은 실행하지 않음.
+        }
+        if(form.password.value.trim()===""){  //만약 userid의 값이 비어있다면
+            alert("ValidationCheck error..password 입력하세요.")
+            return false;
+        }
+        return true;
+    }
+
+        // MouserOver / MouseLeave
+        const d3tg = document.querySelector('#d3')
+        
+        d3tg.addEventListener('click',()=>{
+            d3tg.innerHTML="<h3>CLICKED</h3>"
+        })
+        d3tg.addEventListener('mouseover',()=>{
+            d3tg.innerHTML="<h3>MOUSEOVER</h3>"
+        })
+        d3tg.addEventListener('mouseleave',()=>{
+            d3tg.innerHTML="<h3>MOUSELEAVE</h3>"
+        })
+        //drag , dragover dragstart dragend drop
+        const image = document.querySelector('.image-block')
+        const d4tg = document.querySelector('#d4');
+        image.addEventListener('dragstart',(e)=>{
+            console.log("dragstart",e)
+        })
+        image.addEventListener('dragend',(e)=>{
+            console.log("dragend",e)
+        })
+        d4tg.addEventListener('dragover',(e)=>{
+            console.log("dragover")
+            e.preventDefault();
+        })
+        d4tg.addEventListener('drop',(e)=>{
+            console.log("drop",e)
+            console.log("drop",e.dataTransfer.files)
+            console.log("drop",e.dataTransfer.files[0])
+            const file = e.dataTransfer.files[0];
+
+            if(file.type.startsWith("image/")){  //첫번째로 시작점으로 들어오는 문자열을 확인하는 함수
+                console.log("IMAGE파일..")  
+
+                const imgTg=document.createElement('img')
+                imgTg.src=URL.createObjectURL(file)
+                imgTg.setAttribute("style","width:200px;height:200px")
+                d4tg.appendChild(imgTg)
+            
+            } 
+            e.preventDefault();
+            
+        
+        })
+    </script>
+
+</body>
+</html>
